@@ -14,6 +14,28 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.players {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+}
+
+#playerX {
+    color: var(--dark-color);
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+#playerO {
+    color: var(--light-color);
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.active-player {
+    border-bottom: 0.125rem solid var(--dark-color);
+}
+
 .endgame {
     display: none;
     position: absolute;

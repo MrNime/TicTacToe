@@ -1,6 +1,6 @@
 var origBoard;
-const huPlayer = "O";
-const aiPlayer = "X";
+var huPlayer = "X";
+var aiPlayer = "O";
 const winCombos = [
     [0, 1, 2],
     [3, 4, 5],
@@ -13,7 +13,26 @@ const winCombos = [
 ];
 
 const cells = document.querySelectorAll(".cell > div");
+const chooseX = document.querySelector("#playerX");
+const chooseO = document.querySelector("#playerO");
+chooseX.addEventListener("click", choosePlayer, false);
+chooseO.addEventListener("click", choosePlayer, false);
 startGame();
+
+function choosePlayer(e) {
+    chooseX.classList.remove("active-player");
+    chooseO.classList.remove("active-player");
+    if (e.target.id == "playerX") {
+        huPlayer = "X";
+        aiPlayer = "O";
+        chooseX.classList.add("active-player");
+    } else if (e.target.id == "playerO") {
+        huPlayer = "O";
+        aiPlayer = "X";
+        chooseO.classList.add("active-player");
+    }
+    startGame();
+}
 
 function startGame() {
     document.querySelector(".endgame").style.display = "none";
@@ -24,6 +43,9 @@ function startGame() {
         cells[i].parentElement.style.removeProperty("background-color");
         //boolean captures event in bubbling phase (standard is false)
         cells[i].parentElement.addEventListener("click", turnClick, false);
+    }
+    if (aiPlayer === "X") {
+        turn(4, aiPlayer);
     }
 }
 
@@ -106,7 +128,6 @@ function checkTie() {
 function minimax(newBoard, player) {
     var availSpots = emptySquares(newBoard);
 
-    //PR request beau carner github with player to huplayer
     if (checkWin(newBoard, huPlayer)) {
         return {score: -10};
     } else if (checkWin(newBoard, aiPlayer)) {

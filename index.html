@@ -10,51 +10,55 @@
 </head>
 <body>
 
-<div class="game-wrapper">
-    <div class="row">
-        <div class="cell">
-            <div id="0">0</div>
-        </div>
-        <div class="cell">
-            <div id="1">1</div>
-        </div>
-        <div class="cell">
-            <div id="2">2</div>
-        </div>
+    <div class="players">
+        <div id="playerX" class="active-player">Play as X</div>
+        <div id="playerO">Play as O</div>
     </div>
-    <div class="row">
-        <div class="cell">
-            <div id="3">3</div>
+    <div class="game-wrapper">
+        <div class="row">
+            <div class="cell">
+                <div id="0">0</div>
+            </div>
+            <div class="cell">
+                <div id="1">1</div>
+            </div>
+            <div class="cell">
+                <div id="2">2</div>
+            </div>
         </div>
-        <div class="cell">
-            <div id="4">4</div>
+        <div class="row">
+            <div class="cell">
+                <div id="3">3</div>
+            </div>
+            <div class="cell">
+                <div id="4">4</div>
+            </div>
+            <div class="cell">
+                <div id="5">5</div>
+            </div>
         </div>
-        <div class="cell">
-            <div id="5">5</div>
+        <div class="row">
+            <div class="cell">
+                <div id="6">6</div>
+            </div>
+            <div class="cell">
+                <div id="7">7</div>
+            </div>
+            <div class="cell">
+                <div id="8">8</div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="cell">
-            <div id="6">6</div>
-        </div>
-        <div class="cell">
-            <div id="7">7</div>
-        </div>
-        <div class="cell">
-            <div id="8">8</div>
+
+        <div class="endgame">
+            <div class="text"></div>
+            <button class="btn" onClick="startGame()">Replay</button>
         </div>
     </div>
 
-    <div class="endgame">
-        <div class="text"></div>
-        <button class="btn" onClick="startGame()">Replay</button>
-    </div>
-</div>
+    <footer>
+        <p>Coded by <a href="https://www.freecodecamp.com/MrNime" target="_blank">Nicky Meuleman</a>.</p>
+    </footer>
 
-<footer>
-    <p>Coded by <a href="https://www.freecodecamp.com/MrNime" target="_blank">Nicky Meuleman</a>.</p>
-</footer>
-
-<script src="main.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
 </body>
 </html>
