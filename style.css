@@ -11,6 +11,7 @@ border: 1px black solid;
 
 body {
     background-color: var(--primary-color);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .endgame {
@@ -57,7 +58,6 @@ body {
     justify-content: center;
     border: 2px solid var(--dark-color);
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
     font-size: 5em;
     cursor: pointer;
     width: 1.5em;
@@ -78,4 +78,18 @@ body {
 
 .game-wrapper>.row>.cell:nth-child(3) {
     border-right: 0;
+}
+
+footer {
+    color: var(--light-color);
+    text-align: center;
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+footer > p > a:hover {
+    color: #FFF;
 }
