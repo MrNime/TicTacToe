@@ -63,6 +63,11 @@ function turnClick(e) {
         turn(e.currentTarget.children[0].id, huPlayer);
         if (!checkWin(origBoard, huPlayer) && !checkTie()) {
             turn(bestSpot(), aiPlayer);
+            if (checkWin(origBoard, aiPlayer)) {
+                gameOver(checkWin(origBoard, aiPlayer));
+            } else {
+                checkTie();
+            }
         }
     }
 }
