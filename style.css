@@ -20,16 +20,25 @@ body {
     font-size: 1.5em;
 }
 
-#playerX {
-    color: var(--dark-color);
+.players > div {
     padding: 0.5em;
     cursor: pointer;
 }
 
+#playerX {
+    color: var(--dark-color);
+}
+
 #playerO {
     color: var(--light-color);
-    padding: 0.5em;
-    cursor: pointer;
+}
+
+.X-play {
+    color: #545454;
+}
+
+.O-play {
+    color: #F2EBD3;
 }
 
 .active-player {

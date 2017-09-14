@@ -41,6 +41,8 @@ function startGame() {
     for (let i = 0; i < cells.length; i++) {
         cells[i].innerText = "";
         cells[i].parentElement.style.removeProperty("background-color");
+        cells[i].classList.remove("O-play");
+        cells[i].classList.remove("X-play");
         //boolean captures event in bubbling phase (standard is false)
         cells[i].parentElement.addEventListener("click", turnClick, false);
     }
@@ -68,6 +70,7 @@ function turnClick(e) {
 function turn(squareId, player) {
     origBoard[squareId] = player;
     document.getElementById(squareId).innerText = player;
+    document.getElementById(squareId).classList.add(player + "-play");
     let gameWon = checkWin(origBoard, player);
     if (gameWon) {
         gameOver(gameWon);
